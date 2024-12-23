@@ -13,13 +13,13 @@ function submitRequest(event) {
 
     let params;
 
-    if (searchEngine === "google" || searchEngine === "бинг") {
-        params = "/search?q=";
-    } else if (searchEngine === "яндекс") {
-        params = "/search?text=";
-    }else if (searchEngine === "что это такое!?") {
+    if (searchEngine === "google" || searchEngine === "bing") {
+        params = "search?q=";
+    } else if (searchEngine === "yandex") {
+        params = "search?text=";
+    }else if (searchEngine === "duckduckgo") {
         params = "?q=";
     }
 
-
+    window.location.href = `https://www.${searchEngine}.com/${params}` + value; 
 }
